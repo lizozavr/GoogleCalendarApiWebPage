@@ -1,0 +1,20 @@
+﻿@model WebApplication.Models.CalendarEventParam
+@{
+    ViewData["Title"] = "Event";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="row  py-3">
+        <div class="col-md-8">
+            <div class="align-content-md-start">
+                <h2 class="align-content-md-center">Calendar ID: @Model.calendar_id</h2>
+            </div>
+            
+            <h6>Event ID: @Model.event_id</h6>
+            <h6>Summary: @Model.summary</h6>
+            <h6>Description: @Model.description</h6>
+            <h6>Start time: @Model.start_date_time</h6>
+            <h6>End time: @Model.end_date_time</h6>
+            <h6>Location: @Model.location</h6>
+            
+        </div>
+        </div>

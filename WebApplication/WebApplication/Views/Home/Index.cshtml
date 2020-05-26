@@ -1,0 +1,102 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row mt-4">
+    <div class="col-sm-4">
+        <h5 class="card-title mx-2 mt-2">Get Calendar Event</h5>
+        <p class="card-text mx-2">Get any event of your calendar.</p>
+
+        <form class="form-inline mt-3 pb-2 d-flex justify-content-center" asp-controller="Home" asp-action="Event">
+            <div class="md-form my-0">
+                <input class="form-control typeahead my-1" type="text" autocomplete="off" name="CalendarId"
+                       placeholder="Calendar ID" aria-label="Get">
+                <input class="form-control typeahead my-1" type="text" autocomplete="off" name="EventId"
+                       placeholder="Event ID" aria-label="Get">
+            </div>
+            <button href="#!" class="btn btn-info btn-outline-light btn-md my-1 ml-sm-2"
+                    type="submit">
+                Send
+            </button>
+        </form>
+
+        <hr class="md-form" />
+        <h5 class="card-title mx-2 mt-2">Get Calendar Events</h5>
+        <p class="card-text mx-2">Get all events of your calendar.</p>
+        <form class="form-inline mt-3" asp-controller="Home" asp-action="Calendar">
+            <div class="md-form my-0">
+
+                <input class="form-control typeahead" type="text" autocomplete="off" name="CalendarId"
+                       placeholder="Calendar ID" aria-label="Get">
+            </div>
+            <button href="#!" class="btn btn-info btn-outline-light btn-md my-0 ml-sm-2"
+                    type="submit">
+                Send
+            </button>
+        </form>
+    </div>
+
+    <div class="col-sm-4">
+        <h5 class="card-title mx-2 mt-2">Post Event</h5>
+        <p class="card-text mx-2">Add an event to your calendar.</p>
+
+        <form class="form-inline mt-3 pb-2 d-flex justify-content-center" asp-controller="Home" asp-action="AddEvent">
+            <div class="md-form my-0">
+                <input class="form-control typeahead my-1" type="text" autocomplete="off" name="CalendarId"
+                       placeholder="Calendar ID" aria-label="Get">
+                <input class="form-control typeahead my-1" type="text" autocomplete="off" name="Summary"
+                       placeholder="Event Summary" aria-label="Get">
+                <input class="form-control typeahead my-1" type="text" autocomplete="off" name="Location"
+                       placeholder="Event Location" aria-label="Get">
+                <input class="form-control typeahead my-1" type="text" autocomplete="off" name="Description"
+                       placeholder="Event Description" aria-label="Get">
+                <input class="form-control typeahead my-1" type="text" autocomplete="off" name="StartDateTime"
+                       placeholder="yyyy-mm-ddThh:mm" aria-label="Get">
+                <input class="form-control typeahead my-1" type="text" autocomplete="off" name="EndDateTime"
+                       placeholder="yyyy-mm-ddThh:mm" aria-label="Get">
+
+            </div>
+            <button href="#!" class="btn btn-info btn-outline-light btn-md my-1 ml-sm-2"
+                    type="submit">
+                Send
+            </button>
+        </form>
+    </div>
+
+    <div class="col-sm-4">
+        <form class="form-inline mt-3 pb-2 d-flex justify-content-center" asp-controller="Home" asp-action="QuickAdd">
+            <div class="md-form my-0">
+
+                <h5>Quick Add Event</h5>
+                <p class="card-text mx-2">Quick Add an event to your calendar.</p>
+                <input class="form-control typeahead my-1" type="text" autocomplete="off" name="CalendarId"
+                       placeholder="Calendar ID" aria-label="Get">
+                <input class="form-control typeahead my-1" type="text" autocomplete="off" name="Summary"
+                       placeholder="Event Summary" aria-label="Get">
+            </div>
+            <button href="#!" class="btn btn-info btn-outline-light btn-md my-1 ml-sm-2"
+                    type="submit">
+                Send
+            </button>
+        </form>
+
+        <hr class="md-form" />
+        <h5 class="card-title mx-2 mt-2">Delete Event</h5>
+        <p class="card-text mx-2">Delete any event of your calendar.</p>
+        <form class="form-inline mt-3 pb-2 d-flex justify-content-center" asp-controller="Home" asp-action="DelEvent">
+            <div class="md-form my-0">
+                <input class="form-control typeahead my-1" type="text" autocomplete="off" name="CalendarId"
+                       placeholder="Calendar ID" aria-label="Get">
+                <input class="form-control typeahead my-1" type="text" autocomplete="off" name="EventId"
+                       placeholder="Event ID" aria-label="Get">
+            </div>
+            <button href="#!" class="btn btn-info btn-outline-light btn-md my-1 ml-sm-2"
+                    type="submit">
+                Send
+            </button>
+        </form>
+    </div>
+
+    
+
+</div>

@@ -1,0 +1,25 @@
+﻿@model WebApplication.Models.CalendarParam
+@{
+    ViewData["Title"] = "Calendar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="row  py-3">
+        <div class="col-md-8">
+            <div class="align-content-md-start">
+                <h1 class="align-content-md-center">@Model.calendar_id</h1>
+            </div>
+            <ul>
+                @foreach(var calen_date in Model.date)
+                {
+                    <li>@calen_date</li>
+                }
+            </ul>
+            <ul>
+                @foreach (var calen_event in Model.events)
+                {
+                    <li>@calen_event</li>
+                }
+            </ul>
+            
+            </div>
+        </div>
